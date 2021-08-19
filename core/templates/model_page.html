@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+    </head>
+
+    <body class="d-flex flex-column">
+        <header>
+            {% include "model_header.html" %}
+        </header>
+
+        <main class="content" >
+            <div class="container">
+                {% block content %} {% endblock %}
+            </div>
+        </main>
+
+        <footer class="py-4 bg-dark text-white-50">
+            {% include "model_footer.html" %}
+        </footer>
+    </body>
+
+    <style>
+        html,body{
+            height: 100%;
+        }
+        
+        main{
+            flex: 1 0 auto;
+            margin-top: 5%;
+        }   
+        
+        footer{
+            flex-shrink: none;
+            margin-top: 2em;
+        }
+
+    </style>
+
+</html>
