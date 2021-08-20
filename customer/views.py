@@ -8,6 +8,7 @@ from django.shortcuts import get_object_or_404
 class CustomerListView(ListView):
 # Create your views here.
     template_name = "customer/customer_list.html"
+    paginate_by = 5
     model = Customer 
     queryset = Customer.objects.all()
 
@@ -15,6 +16,7 @@ class CustomerListView(ListView):
 class CustomerCreateView(CreateView):
     template_name = "customer/customer.html"
     form_class = CustomerForm
+
 
     def form_valid(self, form):
         return super().form_valid(form)

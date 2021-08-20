@@ -36,6 +36,7 @@ class CustomerForm(forms.ModelForm):
             "email",
             "birth_date",
             "area_code",
+            "phone_number",
             "country",
             "state",
             "city",
