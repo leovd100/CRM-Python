@@ -1,5 +1,8 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login as django_login
+from django.contrib.auth import( 
+    authenticate, 
+    login as django_login, 
+    logout as django_logout)
 from django.contrib import messages
 # Create your views here.
 
@@ -17,3 +20,7 @@ def submit_login(request):
         else:
             messages.error(request, "Usuário/Senha inválido. Por favor tente novamente")
     return redirect("index")
+
+def logout(request):
+    django_logout(request)
+    return redirect("login")
